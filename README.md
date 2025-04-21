@@ -21,7 +21,7 @@ A complete RESTful API built with **Node.js**, **Express**, and **PostgreSQL** t
 ### 1. Clone the Repository
 
 ```bash
-https://github.com/shivam1tiwari/patient-management-system-api.git
+git clone https://github.com/shivam1tiwari/patient-management-system-api.git
 ```
 ### 2. Install Dependencies( Run command )
 ```javascript
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS visits (
 - Deleting a patient also deletes visits and prescriptions
 
 ### API Endpoints
-#### http://localhost:3000/doctor
+#### http://localhost:4010/doctor
 - POST  /register -- Register a doctor
 - POST  /login -- Doctor login
 - DELETE  /delete -- Delete a doctor
@@ -125,7 +125,7 @@ DELETE /delete
 }
 ```
 #### Resister a Patient sample example
-#### http://localhost:3000/patient
+#### http://localhost:4010/patient
 - POST /register
 ``` json
 {
@@ -144,7 +144,7 @@ DELETE /delete
 }
 ```
 ####  Add Visit (example)
-##### http://localhost:3000/visits
+##### http://localhost:4010/visits
 
 - POST /visit
 ``` json
@@ -160,7 +160,7 @@ DELETE /delete
   {
   visit_id: 1
   }
-##### http://localhost:3000/visits
+##### http://localhost:4010/visits
 - DELETE /delete
 ``` json
 {
@@ -168,7 +168,7 @@ DELETE /delete
 }
 ```
 ####  Add Prescription (example)
-##### http://localhost:3000/cure
+##### http://localhost:4010/cure
 - POST /prescription
 ``` json
 {
