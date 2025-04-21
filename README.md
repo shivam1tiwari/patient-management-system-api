@@ -134,6 +134,8 @@ DELETE /delete
   "doctor_id": 1
 }
 ```
+#### Get all Patients
+- Get /patients
 #### Patient Delete
 - DELETE /register
 ``` json
@@ -152,14 +154,12 @@ DELETE /delete
   "diagnosis": "Viral infection"
 }
 ```
-- GET /visit
-``` json
-{
-  "patient_id": 1,
-  "symptoms": "Fever, headache",
-  "diagnosis": "Viral infection"
-}
-```
+#### Get  Visits By id
+- Get /all-visit
+  ```json
+  {
+  visit_id: 1
+  }
 ##### http://localhost:3000/visits
 - DELETE /delete
 ``` json
@@ -178,6 +178,12 @@ DELETE /delete
 }
 
 ```
+#### GetPrescription by id 
+- Get /all-prescription
+  ```json
+  {
+  patient_id: 1
+  }
 ##### Delete
 - DELETE /delete
 ``` json
