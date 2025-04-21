@@ -42,7 +42,7 @@ const pool = new Pool({
 
 module.exports = pool;
 ```
-### 4. Configure the Database ConnectionRun the Server
+### 4. Run the Server
 ```bash
 npm start
 ```
@@ -95,7 +95,97 @@ CREATE TABLE IF NOT EXISTS visits (
 - Deleting a patient also deletes visits and prescriptions
 
 ### API Endpoints
-#### - http://localhost:3000/doctors 
+#### http://localhost:3000/doctor
 - POST  /register -- Register a doctor
 - POST  /login -- Doctor login
 - DELETE  /delete -- Delete a doctor
+##### Resister a doctor sample example
+- POST /register
+``` json
+{
+  "name": "Dr. Alice",
+  "email": "alice@example.com",
+  "password": "secure123",
+  "hospital_id": 1
+}
+```
+#### Doctor Login
+POST /login
+``` json
+{
+  "email": "alice@example.com",
+  "password": "secure123"
+}
+```
+#### Doctor Delete
+DELETE /delete
+``` json
+{
+  id: 1
+}
+```
+#### Resister a Patient sample example
+#### http://localhost:3000/patient
+- POST /register
+``` json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "doctor_id": 1
+}
+```
+#### Patient Delete
+- DELETE /register
+``` json
+{
+  id: 1
+}
+```
+####  Add Visit (example)
+##### http://localhost:3000/visits
+
+- POST /visit
+``` json
+{
+  "patient_id": 1,
+  "symptoms": "Fever, headache",
+  "diagnosis": "Viral infection"
+}
+```
+- GET /visit
+``` json
+{
+  "patient_id": 1,
+  "symptoms": "Fever, headache",
+  "diagnosis": "Viral infection"
+}
+```
+##### http://localhost:3000/visits
+- DELETE /delete
+``` json
+{
+ id: 1
+}
+```
+####  Add Prescription (example)
+##### http://localhost:3000/cure
+- POST /prescription
+``` json
+{
+  "visit_id": 1,
+  "medicine_name": "Paracetamol",
+  "dosage": "500mg twice daily"
+}
+
+```
+##### Delete
+- DELETE /delete
+``` json
+{
+ id: 1
+}
+
+```
+
+
+
