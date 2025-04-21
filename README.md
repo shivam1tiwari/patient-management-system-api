@@ -122,7 +122,7 @@ POST /login
 DELETE /delete
 ``` json
 {
-  id: 1
+  "id": 1
 }
 ```
 #### Resister a Patient sample example
@@ -141,7 +141,7 @@ DELETE /delete
 - DELETE /register
 ``` json
 {
-  id: 1
+  "id": 1
 }
 ```
 ####  Add Visit (example)
@@ -159,13 +159,13 @@ DELETE /delete
 - Get /all-visit
   ```json
   {
-  visit_id: 1
+  "visit_id": 1
   }
 ##### http://localhost:4010/visits
 - DELETE /delete
 ``` json
 {
- id: 1
+ "id": 1
 }
 ```
 ####  Add Prescription (example)
@@ -177,21 +177,19 @@ DELETE /delete
   "medicine_name": "Paracetamol",
   "dosage": "500mg twice daily"
 }
-
 ```
 #### GetPrescription by id 
 - Get /all-prescription
   ```json
   {
-  patient_id: 1
+  "patient_id": 1
   }
 ##### Delete
 - DELETE /delete
 ``` json
-{
- id: 1
-}
-
+  {
+   "id": 1
+  }
 ```
 
 
