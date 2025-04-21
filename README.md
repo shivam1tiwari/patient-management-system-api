@@ -22,6 +22,7 @@ A complete RESTful API built with **Node.js**, **Express**, and **PostgreSQL** t
 
 ```bash
 git clone https://github.com/shivam1tiwari/patient-management-system-api.git
+cd patient-management-system-api
 ```
 ### 2. Install Dependencies( Run command )
 ```javascript
